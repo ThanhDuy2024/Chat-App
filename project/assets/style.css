@@ -1,0 +1,139 @@
+:root{
+    --black-color:#000;
+    --bgr-color:#f7f6f6;
+    --green-pastel:rgb(88, 251, 88);
+   --hover-color: darkgray;
+   --success-color:rgb(126, 104, 253);
+   --error-color:rgb(250, 103, 103);
+   --shadow:#9b9a9a;
+
+    /*transition*/
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+
+}
+*{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Courier new', sans-serif;
+}
+html{
+    box-sizing: border-box;
+    list-style: 12px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black-color);
+    transition: var(--tran-05);
+}
+input{
+    width: 100%;
+    border: none;
+    height: 40px;
+    font-size: 16px;
+    outline: none;
+    border-bottom: 2px solid #302f2f;
+    font-family: 'Courier New';
+}
+input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--black-color);
+    background-color: var(--bgr-color);
+    width: 100%;
+    height: 30px;
+}
+/* header */
+#header{
+    top:0;
+    height: 60px;
+    background-color: var(--green-pastel);
+    position: sticky;
+    line-height: 60px; 
+    justify-content: space-between;
+    z-index: 1000;
+}
+.logo{
+    width: 150px;
+    float: left;
+}
+.navi{
+    float: right;
+    display: block;
+}
+.navi> li{
+    display: inline;
+    font-weight: 900;
+}
+.login{
+    margin-left: 20px;
+    margin-right: 50px;
+}
+.navi :hover{
+   color: var(--hover-color);
+}
+
+/* content */
+ #content{
+    clear:both;
+    background-color: var(--bgr-color);
+    width: 400px;
+    height: auto ;
+    border-radius:10px ;
+    margin: 60px auto;
+    padding:40px;
+    box-shadow: 2px 2px 2px var(--shadow);
+} 
+#content h1{
+    text-align: center;
+}
+.form-register{
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+}
+.form-register span{
+    position: absolute;
+    border-bottom: 2px solid var(--success-color);
+    width: 0%;
+    left: 0;
+    top: 29px;
+    transition: var(--tran-03);
+}
+.form-register input:focus ~ span{
+    width: 100%;
+}
+.form-register.error small{
+    color:var(--error-color);
+}
+.form-register.error input{
+    border-bottom: 2px solid var(--error-color);
+}
+.btn-submit{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    background-color: var(--green-pastel);
+    font-size: 20px;
+    margin: 25px 0;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px var(--shadow);
+}
+.btn-submit :hover{
+    background-color: var(--hover-color);
+}
+.login-link{
+    text-align: center;
+}
+.login-link a{
+    font-weight: 900;
+}
+.login-link a :hover{
+    text-decoration: underline;
+}
+
